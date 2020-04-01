@@ -13,7 +13,8 @@ export default function Navbar() {
         </h1>
         <ul>
           <li><button>Global</button></li>
-          <li><button>Countries</button></li>  
+          <li><button>Countries</button></li>
+          <li><button>Watchlist</button></li>  
         </ul>
       </nav>
     </>

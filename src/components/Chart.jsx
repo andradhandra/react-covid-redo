@@ -1,7 +1,7 @@
 import React from 'react'
 import '../styles/Chart.css'
 
-import useFetcher from './hooks/fetcher'
+// import useFetcher from './hooks/fetcher'
 
 import {
 	CartesianGrid,
@@ -24,10 +24,10 @@ export default function Chart() {
             width={1000}
             height={500}
             margin={{ top: 20, right: 20, left: 20, bottom: 20 }}
-            data={}
+            data={null}
           >
             <XAxis dataKey="name" />
-            <YAxis domain={} />
+            <YAxis domain={null} />
             <CartesianGrid strokeDasharray="3 3" />
             <Tooltip />
             <Legend />
