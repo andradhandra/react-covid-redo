@@ -20,7 +20,25 @@ export default function Chart() {
       <h1>Statistic by date</h1>
       <div className="Card">
         <ResponsiveContainer aspect={1.6}>
-          
+          <LineChart
+            width={1000}
+            height={500}
+            margin={{ top: 20, right: 20, left: 20, bottom: 20 }}
+            data={}
+          >
+            <XAxis dataKey="name" />
+            <YAxis domain={} />
+            <CartesianGrid strokeDasharray="3 3" />
+            <Tooltip />
+            <Legend />
+            <Line 
+              type="monotone"
+              dataKey="cases"
+              stroke="#8884d8"
+              strokeWidth="3"
+              activeDot={{ r: 8 }}
+            />
+          </LineChart>
         </ResponsiveContainer>
       </div>
     </div>
