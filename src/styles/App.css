@@ -1,0 +1,57 @@
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-content {
+  padding-top: 8vh;
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  font-size: calc(10px + 2vmin);
+  color: #fdfaf3;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.Card {
+  text-align: center;
+  width: 50vw;
+  box-shadow: 
+    15px 15px 20px 0 rgba(0, 0, 0, 0.25),
+    -1px -1px 12px 0 rgba(255, 255, 255, 0.3);
+  border-radius: 25px;
+}
+
+.Card h6 {
+  margin: 3vh 0 1vh 0;
+}
+
+.Card h3 {
+  margin: 0 0;
+  font-size: 40pt;
+}
+
+.Card p {
+  margin: 3vh 0;
+  font-size: 40pt;
+}
+
+.Card .recovered-death {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}

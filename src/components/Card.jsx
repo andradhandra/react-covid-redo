@@ -1,14 +1,30 @@
 import React from 'react'
 
 function Card(props) {
-  const { cases } = props
-  console.log(cases)
-    return (
+  if (!props.cases.confirmed) return <p>loading...</p>
+  const { confirmed, recovered, deaths } = props.cases
+
+  return (
+    <>
+      <h1 className="title">{ props.title }</h1>
       <div className="Card">
-        <h6>Confirmed cases:</h6>
-        <h3>{ cases }</h3>
+        <div className="confirmed">
+          <h6>Confirmed cases:</h6>
+          <h3>{confirmed.value}</h3>
+        </div>
+        <div className="recovered-death">
+          <div className="recovered">
+            <h6>Recovered:</h6>
+            <p><span>{recovered.value}</span></p>
+          </div>
+          <div className="death">
+            <h6>Death:</h6>
+            <p>{deaths.value}</p>
+          </div>
+        </div>
       </div>
-    )
+    </>
+  )
 }
 
 export default Card
