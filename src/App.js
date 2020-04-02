@@ -1,26 +1,37 @@
 import React from 'react';
-import './styles/App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from 'react-router-dom'
+import './styles/App.css'
 
-import Card from './components/Card'
+import Countries from './views/Countries'
+import Watchlist from './views/Watchlist'
+import Home from './views/Home'
 import Navbar from './components/Navbar'
-import Chart from './components/Chart';
 
-import useFetcher from './hooks/fetcher'
 
 function App() {
-  const { data: cases, loading, error } = useFetcher('/')
 
-  if (loading) return <h3>loading...</h3>
-  if (error) return <h3>Error...</h3>
   return (
-    <div className="App">
-      <Navbar />
-      <section className="App-content">
-        <Card title="Global" cases={cases} />
-        <Chart />
-      </section>
-    </div>
-  );
+    <Router>
+      <div className="App">
+        <Navbar />
+        <section className="App-content">
+          <Switch>
+            <Route path="/watchlist">
+              <Watchlist />
+            </Route>
+            <Route path="/countries">
+              <Countries />
+            </Route>
+              <Home />
+          </Switch>
+        </section>
+      </div>
+    </Router>
+  )
 }
 
 export default App;

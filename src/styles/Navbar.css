@@ -13,10 +13,16 @@ nav {
   /* box-shadow: 0 10px 20px rgba(40,44,52,.95); */
 }
 
+nav a {
+  text-decoration: none;
+}
+
 nav .title {
   margin-top: 1vh;
   padding-left: 2vw;
+  color: #fdfaf3;
 }
+
 
 nav .logo {
   font-family: 'Coda', cursive;
@@ -33,7 +39,7 @@ nav li {
   display: inline;
 }
 
-nav button {
+.nav-link a {
   font-size: 14pt;
   font-family: sans-serif;
   display: inline-block;
@@ -45,7 +51,7 @@ nav button {
   color: #fdfaf3;
 }
 
-nav button:hover {
+.nav-link a:hover {
   cursor: pointer;
   background-color: rgb(189, 189, 189);
 }
