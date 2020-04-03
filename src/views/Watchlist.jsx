@@ -8,7 +8,7 @@ export default function Watchlist() {
   const watchlist = useSelector(state => state.watchlist)
 
   let cards = `You haven't add any watchlist`
-  if (watchlist.length) cards = watchlist.map(country => <Card case={country} />)
+  if (watchlist.length) cards = watchlist.map(country => <Card cases={country} />)
   return (
     <section className="Watchlist">
       <h1>Watchlist</h1>
