@@ -1,4 +1,5 @@
 import React from 'react';
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -26,7 +27,9 @@ function App() {
             <Route path="/countries">
               <Countries />
             </Route>
+            <Route path="/">
               <Home />
+            </Route>
           </Switch>
         </section>
       </div>

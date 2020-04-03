@@ -1,13 +1,14 @@
 import React from 'react'
 
 function Card(props) {
-  const { confirmed, recovered, deaths } = props.cases
+  const { name, confirmed, recovered, deaths } = props.cases
 
   return (
     <>
       <h1 className="title">{ props.title }</h1>
       <div className="Card">
         <div className="confirmed">
+          <h3>{name ? name : null}</h3>
           <h6>Confirmed cases:</h6>
           <h3>{confirmed ? confirmed.value : null}</h3>
         </div>
