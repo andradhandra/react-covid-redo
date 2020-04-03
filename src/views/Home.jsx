@@ -14,7 +14,7 @@ export default function Home() {
 
   useEffect(() => {
     dispatch(fetchCases())
-  }, [])
+  }, [dispatch, cases])
 
   if (loading) return <h3>Loading...</h3>
   return (

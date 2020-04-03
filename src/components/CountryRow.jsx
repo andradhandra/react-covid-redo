@@ -1,15 +1,14 @@
 import React from 'react'
-import { useSelector, useDispatch } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import ReactCountryFlag from 'react-country-flag'
 import { addWatchlist } from '../store/actions'
 
 export default function CountryRow(props) {
   const dispatch = useDispatch()
   const { country } = props
-  const watchlist = useSelector(state => state.watchlist)
+  // const watchlist = useSelector(state => state.watchlist)
   const handleClick = (e) => {
     e.preventDefault()
-    console.log(country.name, country.iso2)
     dispatch(addWatchlist(country.name, country.iso2))
   } 
   return (
@@ -29,7 +28,6 @@ export default function CountryRow(props) {
       <div className="watchlist-button">
         <button onClick={handleClick}>+ Watchlist</button>
       </div>
-      {/* dispatch(addWatchlist(country.name, country.iso2)) */}
     </div>
   )
 }

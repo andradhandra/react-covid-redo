@@ -1,6 +1,6 @@
 const initialState = {
   cases : {},
-  dialy : [],
+  daily : [],
   countries : {},
   country : [],
   watchlist : [],
@@ -12,7 +12,7 @@ const reducers = (state = initialState, { type, payload }) => {
     case 'SET_CASES':
       return { ...state, cases: payload }
     case 'SET_DAILY':
-      return { ...state, dialy: payload }
+      return { ...state, daily: payload }
     case 'SET_COUNTRIES':
       return { ...state, countries: payload }
     case 'SET_COUNTRY':

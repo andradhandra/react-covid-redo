@@ -10,9 +10,9 @@ export const SET_CASES = (cases) => ({
   payload: cases
 })
 
-export const SET_DAILY = (dialy) => ({
+export const SET_DAILY = (daily) => ({
   type: 'SET_DAILY',
-  payload: dialy
+  payload: daily
 })
 
 export const SET_COUNTRIES = (countries) => ({

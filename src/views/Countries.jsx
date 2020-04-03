@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import '../styles/Countries.css'
 
 import CountryRow from '../components/CountryRow'
-import { SET_LOADING, fetchCountries } from '../store/actions'
+import { fetchCountries } from '../store/actions'
 
 export default function Countries() {
   const dispatch = useDispatch()
@@ -13,7 +13,7 @@ export default function Countries() {
 
   useEffect(() => {
     dispatch(fetchCountries())
-  }, [])
+  }, [dispatch, countries])
 
   if (loading) return <h3>Loading...</h3>
   return (
