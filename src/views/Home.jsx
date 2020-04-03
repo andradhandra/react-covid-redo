@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux'
 
 import Card from '../components/Card'
 import Chart from '../components/Chart'
-import { fetchCases, SET_LOADING } from '../store/actions'
+import { fetchCases } from '../store/actions'
 
 
 export default function Home() {
@@ -14,7 +14,7 @@ export default function Home() {
 
   useEffect(() => {
     dispatch(fetchCases())
-  }, [dispatch, cases])
+  }, [])
 
   if (loading) return <h3>Loading...</h3>
   return (

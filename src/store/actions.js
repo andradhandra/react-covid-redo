@@ -71,8 +71,7 @@ export const fetchCountry = (countryCode) => async (dispatch) => {
   dispatch(SET_COUNTRY(country))
 }
 
-export const addWatchlist = (countryName, countryCode) => (
-  async (dispatch) => {
+export const addWatchlist = (countryName, countryCode) => async (dispatch) => {
     const { data: country } = await Axios({
       url: `/countries/${countryCode}`,
       method: 'GET'
@@ -80,4 +79,3 @@ export const addWatchlist = (countryName, countryCode) => (
     country.name = countryName
     dispatch(ADD_WATCHLIST(country))
   }
-)
