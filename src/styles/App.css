@@ -26,6 +26,14 @@
   color: #61dafb;
 }
 
+.Home {
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .Card {
   text-align: center;
   width: 50vw;
@@ -54,4 +62,8 @@
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
+}
+
+.Chart h1 {
+  text-align: center;
 }
