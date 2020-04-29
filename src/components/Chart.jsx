@@ -34,6 +34,7 @@ export default function Chart() {
   }
   return (
     <div className="Chart">
+      
       <h1>Total confirmed case to date</h1>
       <div className="ChartContainer">
         <ResponsiveContainer aspect={2}>
