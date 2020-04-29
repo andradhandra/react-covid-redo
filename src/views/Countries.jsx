@@ -13,7 +13,7 @@ export default function Countries() {
 
   useEffect(() => {
     dispatch(fetchCountries())
-  }, [dispatch, countries])
+  }, [dispatch])
 
   if (loading) return <h3>Loading...</h3>
   return (

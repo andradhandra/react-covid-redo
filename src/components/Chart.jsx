@@ -35,25 +35,33 @@ export default function Chart() {
   return (
     <div className="Chart">
       <h1>Total confirmed case to date</h1>
-      <div className="Card">
-        <ResponsiveContainer aspect={1.6}>
+      <div className="ChartContainer">
+        <ResponsiveContainer aspect={2}>
           <LineChart
-            width={1000}
-            height={500}
-            margin={{ top: 20, right: 20, left: 20, bottom: 20 }}
+            width={800}
+            height={300}
+            margin={{ top: 30, right: 20, left: 30, bottom: 20 }}
             data={data}
           >
-            <XAxis dataKey="name" />
-            <YAxis domain={yDomain} />
-            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis 
+              dataKey="name" 
+              tick={{ fontSize: 14 }} 
+              label={{ value:'Date', position: 'insideBottomRight', offset: -10, fontSize: 20, style: { fill: 'grey' } }} 
+            />
+            <YAxis 
+              domain={yDomain} 
+              tick={{ fontSize: 14 }} 
+              label={{ value:'Total cases', position: 'insideTopLeft', offset: -25, fontSize: 20, style: { fill: 'grey' } }}
+            />
+            <CartesianGrid strokeDasharray="5 3" />
             <Tooltip />
             <Legend />
             <Line 
               type="monotone"
               dataKey="cases"
-              stroke="#8884d8"
+              stroke="#21e6c1"
               strokeWidth="3"
-              activeDot={{ r: 8 }}
+              activeDot={{ r: 5 }}
             />
           </LineChart>
         </ResponsiveContainer>
